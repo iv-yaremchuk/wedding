@@ -1,0 +1,333 @@
+body {
+  max-width: 840px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+:root {
+  --main-title: 30px;
+  --section-title: 25px;
+  --subtitle: 20px;
+  --descr: 15px;
+  --color-main: white;
+  --color-accent: rgb(255, 238, 148);
+  --color-experimental: rgba(18, 41, 13, 0.9);
+  --subtitle-font-family: "Montserrat Alternates", sans-serif;
+  --text-font-family: "Montserrat Alternates", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 24px;
+  font-variant: normal;
+  line-height: 26.4px;
+}
+
+.main {
+  background-color: var(--color-experimental);
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  max-width: 840px;
+  height: 100vh;
+  background-image: url("./bottom.jpg");
+  background-position: 45% 80%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 0 0 40px 40px;
+}
+
+.greeting__subtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  border-radius: 40px;
+  background-color: white;
+  padding: 25px 0;
+}
+
+.greeting__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  position: relative;
+}
+
+.greeting__title {
+  display: inline-block;
+  font-size: var(--main-title);
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  z-index: 2;
+  margin-left: 15px;
+}
+
+.greeting__text::after {
+  content: "15.08";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  color: var(--color-accent);
+  font-size: 122px;
+  font-family: "Playfair", serif;
+  z-index: 1;
+  opacity: 0.85;
+  margin-right: 15px;
+}
+
+.greeting__date {
+  color: var(--color-accent);
+  font-size: 50px;
+  font-family: "Playfair", serif;
+}
+
+.greeting__subtext {
+  color: white;
+  padding-bottom: 9px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.greeting__descr {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.greeting__descr,
+.timer {
+  padding: 0 5px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 13.5px;
+  color: var(--color-accent);
+}
+
+.timer__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.timer__item span {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.plan {
+  background-position: 45% 80%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.program {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 40px 40px;
+  padding-top: 25px;
+  padding-bottom: 9px;
+}
+
+.program__title {
+  color: white;
+  font-size: var(--section-title);
+}
+
+.program__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.program__item:first-child::after,
+.text__descr:first-child::after {
+  display: inline-block;
+  content: "";
+  border-left: 1px solid var(--color-accent);
+  height: 25px;
+  margin: 5px 0;
+}
+
+.program__subtitle {
+  font-family: var(--subtitle-font-family);
+  font-size: var(--subtitle);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+.program__address {
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--color-main);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.program__time {
+  font-family: var(--text-font-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-main);
+}
+
+.details {
+  color: white;
+
+  padding-bottom: 9px;
+}
+
+.details__title {
+  font-size: var(--section-title);
+  text-align: center;
+}
+
+.details__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(2px);
+  border-radius: 40px;
+  gap: 20px;
+}
+
+@media (max-width: 579px) {
+  .details__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+}
+.details__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.details-color__subtitle {
+  font-family: var(--subtitle-font-family);
+  font-size: var(--subtitle);
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+.details-color__list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.details-color__item {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.details-color__item.black {
+  background-color: #000000;
+}
+.details-color__item.white {
+  background-color: #ffffff;
+}
+.details-color__item.green {
+  background-color: var(--color-experimental);
+}
+.details-color__item.yellow {
+  background-color: #ffee94;
+}
+.details-color__item.brown {
+  background-color: #52381d;
+}
+.details-color__item.drisnya {
+  background-color: #ad5100;
+}
+
+.details-color__descr {
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.details-color__h4 {
+  margin-bottom: 10px;
+}
+
+.text {
+  padding-bottom: 25px;
+}
+
+.text__descr {
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+.text__descr br {
+  margin-bottom: 5px;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 40px;
+}
+
+.survey__title {
+  font-size: var(--section-title);
+  width: 100%;
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+  background-color: rgba(255, 255, 255, 0.475);
+  padding-top: 23px;
+  margin: 0;
+}
+
+.survey__form {
+  width: 100%;
+  height: 424px;
+  overflow: hidden;
+  backdrop-filter: blur(3px);
+  border-radius: 0 0 40px 40px;
+}
+
+@media (max-width: 425px) {
+  .survey__form {
+    height: 520px;
+  }
+}
