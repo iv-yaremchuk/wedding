@@ -328,7 +328,7 @@ h1 {
 
 @media (max-width: 579px) {
   .greeting {
-    background-image: url("./main.jpg");
+    background-image: url("./top.JPEG");
     background-position: 50% 0%;
     background-size: 135%;
   }
