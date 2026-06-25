@@ -36,6 +36,7 @@ h1 {
   width: 100vw;
   max-width: 840px;
   height: 100vh;
+  min-height: 750px;
   background-image: url("./bottom.jpg");
   background-position: 45% 80%;
   background-size: auto;
