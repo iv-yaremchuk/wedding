@@ -36,7 +36,6 @@ h1 {
   width: 100vw;
   max-width: 840px;
   height: 100vh;
-  min-height: 800px;
   background-image: url("./bottom.jpg");
   background-position: 45% 80%;
   background-size: auto;
@@ -343,7 +342,7 @@ h1 {
   }
 }
 
-@media (max-height: 670px) {
+@media (max-height: 670px) and (min-width: 800px) {
   .greeting {
     background-position: 45% 50%;
   }
