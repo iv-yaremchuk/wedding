@@ -342,6 +342,12 @@ h1 {
   }
 }
 
+@media (max-height: 670px) {
+  .greeting {
+    background-position: 45% 50%;
+  }
+}
+
 @media (max-width: 425px) {
   .survey__form {
     height: 500px;
